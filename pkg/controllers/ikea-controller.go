@@ -4,8 +4,8 @@ import (
 	"encoding/json"
 	"fmt"
 	"github.com/gorilla/mux"
-	"github.com/tbpathirana/go-ikea/pkg/models"
-	"github.com/tbpathirana/go-ikea/pkg/utils"
+	"github.com/timalbpathirana/go-ikea/pkg/models"
+	"github.com/timalbpathirana/go-ikea/pkg/utils"
 	"net/http"
 	"strconv"
 )
@@ -69,10 +69,10 @@ func UpdateProduct(w http.ResponseWriter, r *http.Request) {
 	productDetails, db := models.GetProductById(ID)
 
 	productDetails.Name = newProduct.Name
-	productDetails.Colour = newProduct.Colour
-	productDetails.Location = newProduct.Location
 	productDetails.Size = newProduct.Size
-	productDetails.Price = newProduct.Size
+	productDetails.Colour = newProduct.Colour
+	productDetails.Price = newProduct.Price
+	productDetails.Location = newProduct.Location
 	productDetails.Availability = newProduct.Availability
 
 	//saving the db
