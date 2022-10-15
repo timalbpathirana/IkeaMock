@@ -2,7 +2,7 @@ package models
 
 import (
 	"github.com/jinzhu/gorm"
-	"github.com/tbpathirana/go-ikea/pkg/config"
+	"github.com/timalbpathirana/go-ikea/pkg/config"
 )
 
 var db *gorm.DB
@@ -11,6 +11,7 @@ type Product struct {
 	gorm.Model
 	Name         string `json:"name"`
 	Size         string `json:"size"`
+	Colour       string `json:"size"`
 	Price        string `json:"price"`
 	Location     string `json:"location"`
 	Availability string `json:"availability"`
